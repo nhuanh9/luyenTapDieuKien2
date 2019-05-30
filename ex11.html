@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        var minu = eval(prompt("Thu nhap ca nhan?(Trieu Dong)"));
+        var cuoc;
+        if (minu <500){
+            cuoc = 0.05;
+        } else if (minu<5000){
+            cuoc = 0.1;
+        } else {
+            cuoc = 0.3;
+        }
+        cuoc = minu*cuoc;
+        alert("So tien thue: "+cuoc);
+    </script>
+</body>
+</html>

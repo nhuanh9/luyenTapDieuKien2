@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        var a = eval(prompt("So tien(Trieu) :"));
+        var b = eval(prompt("So thang = "));
+        var c;
+        if (a <10){
+            if (b < 12){
+                c = 0.25;
+            } else {
+                c= 0.2;
+            }
+        } else if (a < 100){
+            if (b<12){
+                c = 0.2;
+            } else if (b<36){
+                c= 0.17;
+            } else {
+                c = 0.15;
+            }
+        } else if (a < 2000){
+            if (b<12){
+                c = 0.16;
+            } else if (b<36){
+                c= 0.15;
+            } else {
+                c = 0.14;
+            }
+        } else {
+
+            if (b<12){
+                c = 15;
+            }  else {
+                c = 0.12;
+            }
+        }
+        var soTien = Math.pow((1+c/12),b)*a;
+        alert("So tien phai tra la:"+soTien);
+    </script>
+</body>
+</html>
