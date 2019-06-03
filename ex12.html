@@ -6,40 +6,40 @@
 </head>
 <body>
     <script>
-        var a = eval(prompt("So tien(Trieu) :"));
-        var b = eval(prompt("So thang = "));
-        var c;
-        if (a <10){
-            if (b < 12){
-                c = 0.25;
+        var money = eval(prompt("So tien(Trieu) :"));
+        var mont = eval(prompt("So thang = "));
+        var inter;
+        if (money <10){
+            if (mont < 12){
+                inter = 0.25;
             } else {
-                c= 0.2;
+                inter = 0.2;
             }
-        } else if (a < 100){
-            if (b<12){
-                c = 0.2;
+        } else if (money < 100){
+            if (mont<12){
+                inter = 0.2;
             } else if (b<36){
-                c= 0.17;
+                inter = 0.17;
             } else {
-                c = 0.15;
+                inter = 0.15;
             }
-        } else if (a < 2000){
-            if (b<12){
-                c = 0.16;
-            } else if (b<36){
-                c= 0.15;
+        } else if (money < 2000){
+            if (mont<12){
+                inter = 0.16;
+            } else if (mont<36){
+                inter = 0.15;
             } else {
-                c = 0.14;
+                inter = 0.14;
             }
         } else {
 
-            if (b<12){
-                c = 15;
+            if (mont<12){
+                inter = 15;
             }  else {
-                c = 0.12;
+                inter = 0.12;
             }
         }
-        var soTien = Math.pow((1+c/12),b)*a;
+        var soTien = Math.pow((1+inter/12),mont)*money;
         alert("So tien phai tra la:"+soTien);
     </script>
 </body>
